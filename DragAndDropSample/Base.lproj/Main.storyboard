@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DragAndDropSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qS2-OL-JGy">
+                                <rect key="frame" x="0.0" y="20" width="768" height="643"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="imageCell" rowHeight="120" id="RjI-W5-9bh" customClass="UIImageTableCell" customModule="DragAndDropSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="768" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RjI-W5-9bh" id="hFf-DD-ArD">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0s0-KR-D4K">
+                                                    <rect key="frame" x="354" y="30" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="UDe-kw-key"/>
+                                                        <constraint firstAttribute="width" constant="60" id="x6N-Dq-g70"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0s0-KR-D4K" firstAttribute="centerX" secondItem="hFf-DD-ArD" secondAttribute="centerX" id="1NA-Y7-Ubo"/>
+                                                <constraint firstItem="0s0-KR-D4K" firstAttribute="centerY" secondItem="hFf-DD-ArD" secondAttribute="centerY" id="NAx-09-Xaf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="rowImageView" destination="0s0-KR-D4K" id="zLU-Iy-cNm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tor-l8-1nI">
+                                <rect key="frame" x="256" y="688" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="SqH-8g-1Lt"/>
+                                    <constraint firstAttribute="height" constant="256" id="eio-ye-HmW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drag images on the area" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kc-3F-dlr">
+                                <rect key="frame" x="40" y="784.5" width="166" height="63.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="gdU-0n-SFH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qS2-OL-JGy" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="5M7-2S-83a"/>
+                            <constraint firstItem="6kc-3F-dlr" firstAttribute="centerY" secondItem="Tor-l8-1nI" secondAttribute="centerY" id="D7l-nh-BpH"/>
+                            <constraint firstItem="Tor-l8-1nI" firstAttribute="leading" secondItem="6kc-3F-dlr" secondAttribute="trailing" constant="50" id="N78-5x-TGM"/>
+                            <constraint firstItem="Tor-l8-1nI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="NDB-P2-CCu"/>
+                            <constraint firstItem="qS2-OL-JGy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nyv-ES-3ib"/>
+                            <constraint firstItem="Tor-l8-1nI" firstAttribute="top" secondItem="qS2-OL-JGy" secondAttribute="bottom" constant="25" id="PJl-ac-EW6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="qS2-OL-JGy" secondAttribute="top" id="PbE-Iu-P8i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tor-l8-1nI" secondAttribute="bottom" constant="80" id="Q3p-sb-dig"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="selectedImageView" destination="Tor-l8-1nI" id="c0X-9f-kco"/>
+                        <outlet property="tableView" destination="qS2-OL-JGy" id="G26-9h-tkA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.71875" y="132.421875"/>
+        </scene>
+    </scenes>
+</document>
